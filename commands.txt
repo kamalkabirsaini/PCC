@@ -1,0 +1,63 @@
+VMware scp command
+
+scp /home/vm1/Desktop/vm1.txt hduser@10.5.31.84:/home/hduser/Desktop/
+
+HDFS COMMANDS
+
+Starting HDFS
+
+hadoop namenode -format 
+start-dfs.sh 
+
+Listing Files in HDFS
+fs -ls <args>
+
+Inserting Data into HDFS
+fs -mkdir /user/input
+fs -put /home/file.txt /user/input
+fs -ls /user/input
+
+Retrieving Data from HDFS
+fs -cat /user/output/outfile
+fs -get /user/output/ /home/hadoop_tp/ 
+
+Shutting Down the HDFS
+stop-dfs.sh 
+
+mv <src><dest>
+
+Moves the file or directory indicated by src to dest, within HDFS.
+
+6.	
+cp <src> <dest>
+
+Copies the file or directory identified by src to dest, within HDFS.
+
+7.	
+rm <path>
+
+Removes the file or empty directory identified by path.
+
+8.	
+rmr <path>
+
+Removes the file or directory identified by path. Recursively deletes any child entries (i.e., files or subdirectories of path).
+
+9.	
+put <localSrc> <dest>
+
+Copies the file or directory from the local file system identified by localSrc to dest within the DFS.
+
+10.	
+copyFromLocal <localSrc> <dest>
+
+Identical to -put
+
+11.	
+moveFromLocal <localSrc> <dest>
+
+Copies the file or directory from the local file system identified by localSrc to dest within HDFS, and then deletes the local copy on success.
+
+help <cmd-name>
+
+Returns usage information for one of the commands listed above. You must omit the leading '-' character in cmd. 
